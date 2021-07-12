@@ -1,5 +1,8 @@
 [![Docker pulls](https://img.shields.io/docker/pulls/logicaldoc/logicaldoc-ce.svg?maxAge=3600)](https://hub.docker.com/r/logicaldoc/logicaldoc-ce/) [![Docker Stars](https://img.shields.io/docker/stars/logicaldoc/logicaldoc-ce.svg?maxAge=3600)](https://hub.docker.com/r/logicaldoc/logicaldoc-ce/) [![Docker layers](https://images.microbadger.com/badges/image/logicaldoc/logicaldoc-ce.svg)](https://microbadger.com/images/logicaldoc/logicaldoc-ce.svg) [![Docker version](https://images.microbadger.com/badges/version/logicaldoc/logicaldoc-ce.svg)](https://microbadger.com/images/logicaldoc/logicaldoc-ce) ![License](https://img.shields.io/badge/License-LGPL%20v3-green.svg?maxAge=3600)
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/bitsnaps/logicaldoc-ce/tree/gitpod-setup)
+
+
 # LogicalDOC Community Edition (AKA LogicalDOC CE)
 A repository for LogicalDOC DMS - Community Edition - Docker image https://www.logicaldoc.com/download-logicaldoc-community
 Note: This image requires to be connected to an external database

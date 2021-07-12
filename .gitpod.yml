@@ -1,0 +1,12 @@
+# exposed ports
+ports:
+- port: 3306 # mysql
+- port: 8080 # LogicalDOC CE
+  onOpen: open-browser
+
+tasks:
+  - init: |
+      docker-compose up --no-start
+    command: |
+      docker-compose up
+  - command: gp await-port 8080 && sleep 3 && gp preview "$(gp url 8080)/logicaldoc"

@@ -4,8 +4,8 @@ FROM openjdk:11-jdk
 MAINTAINER LogicalDOC <packagers@logicaldoc.com>
 
 # set default variables for LogicalDOC install
-ENV LDOC_VERSION="8.6.1"
-ENV LDOC_MEMORY="2000"
+ENV LDOC_VERSION="8.7.3"
+ENV LDOC_MEMORY="2500"
 ENV DEBIAN_FRONTEND="noninteractive"
 ENV CATALINA_HOME="/opt/logicaldoc/tomcat"
 ENV DB_ENGINE="mysql"
@@ -35,15 +35,15 @@ RUN apt-get -y install \
     unzip \    
     imagemagick \
     ghostscript \
-    python-jinja2 \
-    python-pip \
+    python3-jinja2 \
+    python3-pip \
     mariadb-client \
     postgresql-client \
     vim \
     nano
 
-# Download and unzip LogicalDOC CE installer 
-RUN curl -L https://sourceforge.net/projects/logicaldoc/files/distribution/LogicalDOC%20CE%208.6/logicaldoc-community-installer-${LDOC_VERSION}.zip/download \
+# Download and unzip LogicalDOC CE installer
+RUN curl -L https://sourceforge.net/projects/logicaldoc/files/distribution/LogicalDOC%20CE%208.7/logicaldoc-community-installer-${LDOC_VERSION}.zip/download \
     -o /opt/logicaldoc/logicaldoc-community-installer-${LDOC_VERSION}.zip && \
     unzip /opt/logicaldoc/logicaldoc-community-installer-${LDOC_VERSION}.zip -d /opt/logicaldoc && \
     rm /opt/logicaldoc/logicaldoc-community-installer-${LDOC_VERSION}.zip

@@ -29,7 +29,7 @@ LogicalDOC CE is 100% free software, supports all major DBMS and this particular
 **Start a LogicalDOC instance linked to a MySQL container**
 1. Run the MySQL container
 ```Shell
-docker run -d --name=mysql-ld -e MYSQL_ROOT_PASSWORD=mypassword -e MYSQL_DATABASE=logicaldoc -e MYSQL_USER=ldoc -e MYSQL_PASSWORD=changeme mysql:8.0
+docker run -d --name=mysql-ld -e MYSQL_ROOT_PASSWORD=mypassword -e MYSQL_DATABASE=logicaldoc -e MYSQL_USER=ldoc -e MYSQL_PASSWORD=changeme mysql:8.0 --default-authentication-plugin=mysql_native_password
 ```
 
 2. Run the LogicalDOC container
@@ -296,6 +296,7 @@ services:
 
   mysql-ld: 
     image: mysql:8.0
+	command: --default-authentication-plugin=mysql_native_password
     environment:
       - MYSQL_ROOT_PASSWORD=example
       - MYSQL_DATABASE=logicaldoc
